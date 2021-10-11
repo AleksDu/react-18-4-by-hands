@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/react-18-4-by-hands/static/css/main.a617e044.chunk.css",
-    "main.js": "/react-18-4-by-hands/static/js/main.7d2abca8.chunk.js",
-    "main.js.map": "/react-18-4-by-hands/static/js/main.7d2abca8.chunk.js.map",
-    "runtime-main.js": "/react-18-4-by-hands/static/js/runtime-main.69304d10.js",
-    "runtime-main.js.map": "/react-18-4-by-hands/static/js/runtime-main.69304d10.js.map",
-    "static/js/2.6fca1662.chunk.js": "/react-18-4-by-hands/static/js/2.6fca1662.chunk.js",
-    "static/js/2.6fca1662.chunk.js.map": "/react-18-4-by-hands/static/js/2.6fca1662.chunk.js.map",
-    "static/js/3.820fe945.chunk.js": "/react-18-4-by-hands/static/js/3.820fe945.chunk.js",
-    "static/js/3.820fe945.chunk.js.map": "/react-18-4-by-hands/static/js/3.820fe945.chunk.js.map",
+    "main.css": "/react-18-4-by-hands/static/css/main.11773590.chunk.css",
+    "main.js": "/react-18-4-by-hands/static/js/main.aed07142.chunk.js",
+    "main.js.map": "/react-18-4-by-hands/static/js/main.aed07142.chunk.js.map",
+    "runtime-main.js": "/react-18-4-by-hands/static/js/runtime-main.d621a949.js",
+    "runtime-main.js.map": "/react-18-4-by-hands/static/js/runtime-main.d621a949.js.map",
+    "static/js/2.ce99438e.chunk.js": "/react-18-4-by-hands/static/js/2.ce99438e.chunk.js",
+    "static/js/2.ce99438e.chunk.js.map": "/react-18-4-by-hands/static/js/2.ce99438e.chunk.js.map",
+    "static/js/3.c90ce69a.chunk.js": "/react-18-4-by-hands/static/js/3.c90ce69a.chunk.js",
+    "static/js/3.c90ce69a.chunk.js.map": "/react-18-4-by-hands/static/js/3.c90ce69a.chunk.js.map",
     "index.html": "/react-18-4-by-hands/index.html",
-    "static/css/main.a617e044.chunk.css.map": "/react-18-4-by-hands/static/css/main.a617e044.chunk.css.map",
-    "static/js/2.6fca1662.chunk.js.LICENSE.txt": "/react-18-4-by-hands/static/js/2.6fca1662.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/react-18-4-by-hands/static/media/logo.6ce24c58.svg"
+    "static/css/main.11773590.chunk.css.map": "/react-18-4-by-hands/static/css/main.11773590.chunk.css.map",
+    "static/js/2.ce99438e.chunk.js.LICENSE.txt": "/react-18-4-by-hands/static/js/2.ce99438e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.69304d10.js",
-    "static/js/2.6fca1662.chunk.js",
-    "static/css/main.a617e044.chunk.css",
-    "static/js/main.7d2abca8.chunk.js"
+    "static/js/runtime-main.d621a949.js",
+    "static/js/2.ce99438e.chunk.js",
+    "static/css/main.11773590.chunk.css",
+    "static/js/main.aed07142.chunk.js"
   ]
 }
