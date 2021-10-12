@@ -7,7 +7,7 @@ import TodoList from './components/TodoList';
 import TodoEditor from './components/TodoEditor';
 import Filter from './components/Filter';
 // import Form from './components/Form';
-import initialTodos from './todos.json';
+import initialTodos from './components/todos.json';
 
 class App extends Component {
   state = {

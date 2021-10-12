@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './TodoEditor.scss';
+import './index';
 
 class TodoEditor extends Component {
   state = {
