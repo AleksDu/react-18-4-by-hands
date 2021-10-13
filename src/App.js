@@ -7,13 +7,28 @@ import TodoList from './components/TodoList';
 import TodoEditor from './components/TodoEditor';
 import Filter from './components/filter';
 // import Form from './components/Form';
-import initialTodos from './components/todos.json';
+// import initialTodos from './components/todos.json';
+import Modal from './components/Modal'
+import Clock from './components/Clock';
+import Tabs from './components/Tabs';
+import tabs from './tabs.json'
+import IconButton from './components/IconButton';
+import {ReactComponent as AddIcon} from './icons/add.svg'
+import { getNodeText } from '@testing-library/dom';
 
 class App extends Component {
   state = {
-    todos: initialTodos,
+    // todos: initialTodos,
+    todos: [],
     filter: '',
+    showModal: false
   };
+
+  toggleModal = () => {
+    this.setState(({showModal})=>({
+      showModal: !showModal,
+    }))
+  }
 
   addTodo = text => {
     const todo = {
@@ -25,6 +40,8 @@ class App extends Component {
     this.setState(({ todos }) => ({
       todos: [todo, ...todos],
     }));
+
+    // this.toggleModal();
   };
 
   deleteTodo = todoId => {
@@ -76,14 +93,53 @@ class App extends Component {
     );
   };
 
+  componentDidMount() {
+    console.log('App componentDidMount');
+    const todos = localStorage.getItem('todos');
+    const parsedTodos = JSON.parse(todos);
+    console.log(parsedTodos)
+    if (parsedTodos) {
+          this.setState({todos: parsedTodos})
+    }
+    
+  };
+   componentDidUpdate(prevProps, prevState) {
+    // console.log('App componentDidUpdate');
+
+    const nextTodos = this.state.todos;
+    const prevTodos = prevState.todos;
+
+    if (nextTodos !== prevTodos) {
+      console.log('Обновилось поле todos, записываю todos в хранилище');
+      localStorage.setItem('todos', JSON.stringify(nextTodos));
+    }
+
+    if (nextTodos.length > prevTodos.length && prevTodos.length !== 0) {
+      this.toggleModal();
+    }
+  }
+
+
   render() {
-    const { todos, filter } = this.state;
+    const { todos, filter, showModal } = this.state;
     const totalTodoCount = todos.length;
     const completedTodoCount = this.calculateCompletedTodos();
     const visibleTodos = this.getVisibleTodos();
 
     return (
       <Container>
+       
+        <IconButton onClick={this.toggleModal} aria-label='добавить тодо'>
+          <AddIcon width='40' height='40' />
+        </IconButton>
+        <Tabs items={tabs}/>
+        <Clock />
+       {showModal && (
+          <Modal onClose={this.toggleModal}>
+            <TodoEditor onSubmit={this.addTodo} />
+          </Modal>
+        )}
+      
         {/* TODO: вынести в отдельный компонент */}
 
         <div>
@@ -91,22 +147,24 @@ class App extends Component {
           <p>Выполнено: {completedTodoCount}</p>
         </div>
 
-        <TodoEditor onSubmit={this.addTodo} />
+       
 
         <Filter value={filter} onChange={this.changeFilter} />
 
         <TodoList
           todos={visibleTodos}
           onDeleteTodo={this.deleteTodo}
-          onToggleCompleted={this.toggleCompleted}
+          onToggleCompleted={this.toggleCompleted} 
         />
       </Container>
     );
-  }
+  };
 }
 
-export default App;
 
+
+export default App;
+{/* 
 // const colorPickerOptions = [
 //   { label: 'red', color: '#F44336' },
 //   { label: 'green', color: '#4CAF50' },
@@ -114,4 +172,4 @@ export default App;
 //   { label: 'grey', color: '#607D8B' },
 //   { label: 'pink', color: '#E91E63' },
 //   { label: 'indigo', color: '#3F51B5' },
-// ];
+// ]; */}
