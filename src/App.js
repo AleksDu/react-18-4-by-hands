@@ -14,7 +14,7 @@ import Tabs from './components/Tabs';
 import tabs from './tabs.json'
 import IconButton from './components/IconButton';
 import {ReactComponent as AddIcon} from './icons/add.svg'
-import { getNodeText } from '@testing-library/dom';
+// import { getNodeText } from '@testing-library/dom';
 
 class App extends Component {
   state = {
@@ -164,12 +164,14 @@ class App extends Component {
 
 
 export default App;
-{/* 
-// const colorPickerOptions = [
+
+// eslint-disable-next-line
+{// const colorPickerOptions = [
 //   { label: 'red', color: '#F44336' },
 //   { label: 'green', color: '#4CAF50' },
 //   { label: 'blue', color: '#2196F3' },
 //   { label: 'grey', color: '#607D8B' },
 //   { label: 'pink', color: '#E91E63' },
 //   { label: 'indigo', color: '#3F51B5' },
-// ]; */}
+  // ]; 
+} 
