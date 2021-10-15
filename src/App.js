@@ -140,7 +140,7 @@ class App extends Component {
           </Modal>
         )}
       
-        {/* TODO: вынести в отдельный компонент */}
+       
 
         <div>
           <p>Всего заметок: {totalTodoCount}</p>
